@@ -213,6 +213,18 @@ header .bottom-menu ul li:nth-child(1) {
 	line-height: 20px;
 }
 
+.hero a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: #fff;
+	color: #000;
+	font-size: .7rem;
+	padding: 10px 0 0 0;
+	text-align: center;
+	text-decoration: none;
+}
+
 @media (max-width: 768px) {
 	.hero {
 		text-align: center;
@@ -349,6 +361,18 @@ header .bottom-menu ul li:nth-child(1) {
 	line-height: 30px;
 }
 
+.featured-items .featureditem a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: #fff;
+	color: #000;
+	font-size: .7rem;
+	padding: 10px 0 0 0;
+	text-align: center;
+	text-decoration: none;
+}
+
 @media (max-width: 768px) {
 	.featured-items .featureditem {
 		width: 350px;
@@ -409,7 +433,6 @@ header .bottom-menu ul li:nth-child(1) {
 @media (max-width: 768px) {
 	.latest-collection .column {
 		width: 350px;
-		border: none;
 	}
 }
 
@@ -453,6 +476,9 @@ header .bottom-menu ul li:nth-child(1) {
 
 @media (max-width: 768px) {
 	.latest-collection .collection {
+		width: 350px;
+		height: 370px;
+		align-items: center;
 		display: none;
 	}
 	.latest-collection .collection.active {
@@ -478,6 +504,12 @@ header .bottom-menu ul li:nth-child(1) {
 	height: 100%;
 	background-image: url(../img/theinheritance.jpg);
 	background-position: center;
+}
+
+@media (max-width: 768px) {
+	.latest-collection .collection-3 {
+		height: 370px;
+	}
 }
 
 .latest-collection .collection-4 {
@@ -506,6 +538,7 @@ footer .top-footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	padding-bottom: 30px;
 }
 
 @media (max-width: 768px) {
@@ -563,7 +596,7 @@ footer i {
 footer input {
 	border: 1px solid #fff;
 	background-color: #000;
-	height: 20px;
+	height: 30px;
 	width: 200px;
 }
 
@@ -572,12 +605,30 @@ footer input[placeholder] {
 	font-family: 'din-condensed', sans-serif;
 }
 
-footer button {
+footer .email-container p {
+	margin-bottom: 20px;
+}
+
+footer .email-container div {
+	display: flex;
+	flex-direction: row;
+}
+
+footer .email-container a {
 	background-color: #fff;
 	font-family: 'din-condensed', sans-serif;
 	height: 20px;
 	width: 75px;
 	border-radius: 0px;
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: #fff;
+	color: #000;
+	font-size: .7rem;
+	padding: 10px 0 0 0;
+	text-align: center;
+	text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -601,7 +652,7 @@ footer button {
 		background-color: #ccc;
 		margin-right: 5px;
 	}
-	.slider-dots.active {
+	.slider-dots span.active {
 		background-color: #000;
 	}
 }

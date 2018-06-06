@@ -2,33 +2,73 @@ console.log(`Hello World from app.js!
 Change this message, and make sure it changes in the browser 
 to verify that you're working in the right files.`)
 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+
+var SlideshowModule = function(parentSelector) {
+
+	var parent = document.querySelector(parentSelector)
+
+	var slideIndex = 1;
+	// showSlides(slideIndex);
+
+	function changeSlideBy(n) { // change slide by n amount
+	  showSlides(slideIndex += n);
+	}
+
+	function changeSlideTo(n) {
+	  showSlides(slideIndex = n);
+	}
+
+
+	var i;
+
+	var slides = parent.querySelectorAll(".slider-container .slide");
+	console.log("slides", slides)
+
+	var dots = parent.querySelectorAll(".slider-dots .dot");
+	console.log("dots", dots)
+
+	function showSlides(n) {
+
+	  if (n > slides.length) {
+	    slideIndex = 1
+	  }
+	  if (n < 1) {
+	    slideIndex = slides.length
+	  }
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].classList.remove("active");
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].classList.remove("active");
+	  }
+	  slides[slideIndex - 1].classList.add("active");
+	  dots[slideIndex - 1].classList.add("active");
+	}
+
+
+	dots.forEach( function(dot, i) {
+
+		dot.addEventListener("click", function(){
+			clearInterval(slideshowInterval);
+			console.log("click slider dot" ,i);
+			changeSlideTo(i + 1);
+		})
+
+	} )
+
+
+	var slideshowInterval = setInterval(function() {
+		changeSlideBy(1)
+	}, 7000);
+
+
+
+
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("recent");
-  var dots = document.getElementsByClassName("recent-slider-dots");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
+SlideshowModule('.recent-section');
+SlideshowModule('.featured-items');
+SlideshowModule('.latest-collection');
+

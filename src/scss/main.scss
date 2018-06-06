@@ -153,6 +153,18 @@ header{
 		font-weight: 200;
 		line-height: 20px;
 	}
+
+	a{
+		display: block;
+		width: 100px;
+		height: 30px;
+		background-color: #fff;
+		color: #000;
+		font-size: .7rem;
+		padding: 10px 0 0 0;
+		text-align: center;
+		text-decoration: none;
+	}
 	@media (max-width: $breakpoint-mobile) {
 		text-align: center;
 	}
@@ -192,6 +204,7 @@ header{
 			color: #000;
 			font-size: .9rem;
 		}
+
 		@media (max-width: $breakpoint-mobile) {
 			// align-items: center;
 			display: none;
@@ -263,6 +276,17 @@ header{
 			font-weight: 200;
 			line-height: 30px;
 		}
+		a{
+			display: block;
+			width: 100px;
+			height: 30px;
+			background-color: #fff;
+			color: #000;
+			font-size: .7rem;
+			padding: 10px 0 0 0;
+			text-align: center;
+			text-decoration: none;
+		}
 		@media (max-width: $breakpoint-mobile) {
 			width:350px;
 			height:370px;
@@ -311,7 +335,6 @@ header{
 		// border-right: 1px solid #000;
 		@media (max-width: $breakpoint-mobile) {
 			width:350px;
-			border: none;
 
 		}
 	}
@@ -329,7 +352,6 @@ header{
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		// align-items: center;
 		text-align: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -355,6 +377,9 @@ header{
 		}
 
 		@media (max-width: $breakpoint-mobile) {
+			width:350px;
+			height:370px;
+			align-items: center;
 			display: none;
 			&.active{
 				display: flex;
@@ -377,6 +402,9 @@ header{
 		background-image: url(../img/theinheritance.jpg);
 		background-position: center ;
 
+	 	@media (max-width: $breakpoint-mobile) {
+			height:370px;
+	 	}
 	}
 	.collection-4{
 		background-image: url(../img/bowline.jpg);
@@ -402,6 +430,7 @@ footer{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		padding-bottom: 30px;
 		@media (max-width: $breakpoint-mobile) {
 			width: 100%;
 		}
@@ -448,19 +477,38 @@ footer{
 	input{
 		border: 1px solid #fff;
 		background-color: #000;
-		height: 20px;
+		height: 30px;
 		width:200px;
 	}
 	input[placeholder]{
 		color: #fff;
 		font-family: 'din-condensed', sans-serif;
 	}
-	button{
-		background-color: #fff;
-		font-family: 'din-condensed', sans-serif;
-		height: 20px;
-		width:75px;
-		border-radius: 0px;
+
+	.email-container{ 
+		p{
+			margin-bottom: 20px;
+		}
+		div{
+			display: flex;
+			flex-direction: row;
+		}
+		a{
+			background-color: #fff;
+			font-family: 'din-condensed', sans-serif;
+			height: 20px;
+			width:75px;
+			border-radius: 0px;
+			display: block;
+			width: 100px;
+			height: 30px;
+			background-color: #fff;
+			color: #000;
+			font-size: .7rem;
+			padding: 10px 0 0 0;
+			text-align: center;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -486,10 +534,11 @@ footer{
 			border-radius: 50%;
 			background-color: #ccc;
 			margin-right: 5px;
+			&.active{
+				background-color: #000;
+			}
 		}
-		&.active{
-			background-color: #000;
-		}
+		
 	}
 }
 
@@ -505,6 +554,7 @@ footer{
 	.slider-dots{
 		display: none;
 	}
+
 }
 
 
