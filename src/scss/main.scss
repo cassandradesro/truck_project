@@ -140,22 +140,14 @@ header{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
+	box-shadow: inset 0px -96px 262px 159px rgba(0,0,0,0.35);
 	
 	@media (max-width: $breakpoint-mobile) {
 		text-align: center;
 	}
 
 }
-.bg{
-	position: absolute;
-	top: 212px;
-	width: 100%;
-	height: 300px;
-	background-color: #000;
-	opacity: .5;
-	z-index: 2;
-}
+
 .wrapper{
 	margin: 3% 4%;
 	display: flex;
@@ -166,6 +158,9 @@ header{
 }
 
 .recent-section{
+	h2{
+		margin-bottom: 20px;
+	}
 	.recent-container{
 		display: flex;
 		flex-direction: row;
@@ -184,6 +179,9 @@ header{
 			&.active{
 				display: flex;
 			}
+		}
+		h3{
+			margin: 10px 0;
 		}
 		div{
 			display: flex;
@@ -212,6 +210,10 @@ header{
 
 .featured-items{
 	border-top: 1px solid #000;
+	margin: 20px 0;
+	h2{
+		margin: 20px 0;
+	}
 	.featured-items-container{
 		display: flex;
 		flex-direction: row;
@@ -230,7 +232,9 @@ header{
 		height: 664px;
 		background-repeat: no-repeat;
 		background-size: cover;
+		box-shadow: inset 0px -198px 148px -52px rgba(0,0,0,0.93);
 		color: #fff;
+
 		@media (max-width: $breakpoint-mobile) {
 			width:350px;
 			height:370px;
@@ -244,6 +248,9 @@ header{
 	.featureditem-1{
 		background-image: url(../img/tr-denim-totebag-01.jpg);
 		background-position: -400px;
+		@media (max-width: $breakpoint-mobile) {
+			background-position: center;
+		}
 	}
 	.featureditem-2{
 		background-image: url(../img/book.jpg);
@@ -253,10 +260,15 @@ header{
 
 .latest-collection{
 	border-top: 1px solid #000;
+	margin: 20px 0;
+	h2{
+		margin: 20px 0;
+	}
 	.latest-collection-container{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		color: #fff;
 
 		@media (max-width: $breakpoint-mobile) {
 			flex-direction: column;
@@ -268,12 +280,22 @@ header{
 		width: 370px;
 		flex-direction: column;
 		justify-content: space-between;
-		border-right: 1px solid #000;
+		// border-right: 1px solid #000;
 		@media (max-width: $breakpoint-mobile) {
 			width:350px;
 			border: none;
 
 		}
+	}
+	.column-two{
+
+		.line{
+			width: 1px;
+			background-color: #ccc;
+			margin: 0 -10%;
+		}
+		display: flex;
+		flex-direction: row;
 	}
 	.column-three{
 		border: none;
@@ -296,33 +318,43 @@ header{
 			}
 		}
 	}
+	.collection-1, .collection-4{
+		margin-bottom: 20px;
+	}
 	.collection-1{
-		background-image: url(../img/book.jpg);
+		background-image: url(../img/truckxuniqlo.jpg);
 		background-position: center;
 	}
 	.collection-2{
-		background-image: url(../img/book.jpg);
+		background-image: url(../img/greencouch.jpg);
 		background-position: center;
 	}
 	.collection-3{
 		height: 100%;
-		background-image: url(../img/book.jpg);
-		background-position: center;
+		background-image: url(../img/theinheritance.jpg);
+		background-position: center ;
+
 	}
 	.collection-4{
-		background-image: url(../img/book.jpg);
+		background-image: url(../img/bowline.jpg);
 		background-position: center;
 	}
 	.collection-5{
-		background-image: url(../img/book.jpg);
+		background-image: url(../img/newark.jpg);
 		background-position: center;
 	}
 }
 
 footer{
-	background-color: green;
+	background-color: #000;
 	display: flex;
 	flex-direction: column;
+	color: #fff;
+	a{
+		color:#fff;
+		text-decoration: none;
+	}
+
 	.top-footer{
 		display: flex;
 		flex-direction: row;
@@ -362,6 +394,26 @@ footer{
 
 		}
 	}
+	i{
+		color:#fff;
+	}
+	input{
+		border: 1px solid #fff;
+		background-color: #000;
+		height: 20px;
+		width:200px;
+	}
+	input[placeholder]{
+		color: #fff;
+		font-family: 'din-condensed', sans-serif;
+	}
+	button{
+		background-color: #fff;
+		font-family: 'din-condensed', sans-serif;
+		height: 20px;
+		width:75px;
+		border-radius: 0px;
+	}
 }
 
 
@@ -378,6 +430,7 @@ footer{
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		margin-top: 20px;
 		span{
 			display: block;
 			width: 12px;
