@@ -1,8 +1,4 @@
-console.log(`Hello World from app.js! 
-Change this message, and make sure it changes in the browser 
-to verify that you're working in the right files.`)
-
-
+console.log("Truck Furniture developed by Cassandra Desrosiers designed by Ezell Brown");
 
 var SlideshowModule = function(parentSelector) {
 
@@ -53,22 +49,62 @@ var SlideshowModule = function(parentSelector) {
 			clearInterval(slideshowInterval);
 			console.log("click slider dot" ,i);
 			changeSlideTo(i + 1);
-		})
+		});
 
-	} )
-
+	});
 
 	var slideshowInterval = setInterval(function() {
 		changeSlideBy(1)
 	}, 7000);
-
-
-
-
 }
 
 
 SlideshowModule('.recent-section');
 SlideshowModule('.featured-items');
 SlideshowModule('.latest-collection');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

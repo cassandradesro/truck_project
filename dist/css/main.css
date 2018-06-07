@@ -202,6 +202,7 @@ table {
 	width: 100%;
 	display: flex;
 	align-items: center;
+	opacity: 0;
 }
 
 @media (max-width: 768px) {
@@ -213,6 +214,10 @@ table {
 
 .flex-end {
 	justify-content: flex-end;
+}
+
+.flex-end.content-container {
+	transform: translateX(-60%);
 }
 
 .flex-end .content-text {
@@ -238,6 +243,10 @@ table {
 
 .flex-start {
 	justify-content: flex-start;
+}
+
+.flex-start.content-container {
+	transform: translateX(60%);
 }
 
 .flex-start .content-text {
@@ -307,10 +316,6 @@ table {
 	line-height: 20px;
 }
 
-.content-text p {
-	font-weight: 200;
-}
-
 @media (max-width: 768px) {
 	.content-text {
 		justify-content: space-between;
@@ -318,6 +323,13 @@ table {
 		height: 242px;
 		line-height: unset;
 	}
+}
+
+.content-text p {
+	font-weight: 200;
+}
+
+@media (max-width: 768px) {
 	.content-text p {
 		font-size: .7rem;
 	}
