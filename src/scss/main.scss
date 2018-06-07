@@ -15,6 +15,8 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
+@import 'products';
+@import 'gallery';
 @font-face {
   font-family: "Trade Gothic";
   		src: url("/fonts/TradeGothicLTStd.otf") format("otf"),
@@ -44,6 +46,11 @@ body {
 	font-family: "Gotham", sans-serif;
 	font-weight: bold;
 	font-size: 2rem;
+	cursor: pointer;
+	a{
+		text-decoration: none;
+		color: #000;
+	}
 	@media (max-width: $breakpoint-mobile) {
 		font-size: 1.2rem;
 	}
@@ -126,11 +133,12 @@ header{
 		}
 	}
 }
-
+.home-hero{
+	background-image: url(../img/hero.jpg);
+}
 .hero{
 	width: 100%;
 	background-color: red;
-	background-image: url(../img/hero.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -437,11 +445,13 @@ footer{
 		.links-container{
 			display: flex;
 			flex-direction: column;
-			width: 400px;
+			width: 300px;
 			div{
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
+				margin-bottom: 15px;
+
 			}
 		}
 		.mobile-links-container{
