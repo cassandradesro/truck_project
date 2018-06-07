@@ -13,3 +13,54 @@ $breakpoint-mobile: 768px;
 .scroll{
 	background-color: yellow;
 }
+
+.gallery-title{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+}
+.content-container{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.flex-end{
+	justify-content: flex-end;
+}
+.flex-start{
+	justify-content: flex-start;
+}
+
+.content-image{
+	width: 390px; //490
+	height: 562px; //662
+	background-color: blue;
+	
+}
+
+.content-text{
+	width: 572px; //672
+	height: 342px; //442
+	background-color: orange;
+
+}
+.gallery-slider-dots{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-right: 20px;
+	span{
+		display: block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #ccc;
+		margin-bottom: 5px;
+		&.active{
+			background-color: #000;
+		}
+	}
+	
+}

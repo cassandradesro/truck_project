@@ -178,6 +178,59 @@ table {
 	background-color: yellow;
 }
 
+.gallery-title {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.flex-start {
+	justify-content: flex-start;
+}
+
+.content-image {
+	width: 390px;
+	height: 562px;
+	background-color: blue;
+}
+
+.content-text {
+	width: 572px;
+	height: 342px;
+	background-color: orange;
+}
+
+.gallery-slider-dots {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-right: 20px;
+}
+
+.gallery-slider-dots span {
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin-bottom: 5px;
+}
+
+.gallery-slider-dots span.active {
+	background-color: #000;
+}
+
 @font-face {
 	font-family: "Trade Gothic";
 	src: url("/fonts/TradeGothicLTStd.otf") format("otf");
