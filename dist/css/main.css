@@ -163,6 +163,8 @@ table {
 
 .gallery-hero {
 	background-image: url(../img/gallery-hero.jpg);
+	position: relative;
+	z-index: 999999;
 }
 
 .gallery-wrapper {
@@ -356,8 +358,16 @@ table {
 .gallery-slider-dots {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	position: fixed;
+	top: 70%;
+	right: 20px;
 	margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+	.gallery-slider-dots {
+		right: 5px;
+	}
 }
 
 .gallery-slider-dots span {
@@ -384,10 +394,9 @@ table {
 	color: #fff;
 	background-color: #242424;
 	border-top: 1px solid #ccc;
-}
-
-.scroll p {
-	padding: 5px 0;
+	position: relative;
+	z-index: 999999 p;
+	z-index-padding: 5px 0;
 }
 
 @media (max-width: 768px) {
@@ -396,14 +405,19 @@ table {
 	}
 }
 
+.gallery-footer {
+	position: relative;
+	z-index: 999999;
+}
+
 @font-face {
-	font-family: "Trade Gothic";
-	src: url("/fonts/TradeGothicLTStd.otf") format("otf");
+	font-family: "TradeGothic";
+	src: url("../fonts/TradeGothicLTStd-Cn18.otf") format("otf");
 }
 
 @font-face {
 	font-family: "Gotham";
-	src: url("/fonts/Gotham-Ultra.otf") format("otf");
+	src: url("../fonts/Gotham-Ultra.otf") format("otf");
 }
 
 /* 1. Main Layout ================================= */

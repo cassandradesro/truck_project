@@ -3,77 +3,98 @@
 /////////////WAYPOINTS///////////////////
 
 
+var galleryDots = document.querySelectorAll('.gallery-dot');
+// for (var i = 0; i < galleryDots.length; i++) {
+//     var gallerydot = galleryDots[i];
+// }
+
+
 var waypoint = new Waypoint({
   element: document.querySelector('#content-container1'),
   handler: function handler(direction) {
     console.log(direction);
-    if (direction == 'down') {
-      console.log('first content-container');
-      TweenMax.to("#content-container1", 1, { "transform": "translateX(0)", opacity: 1 });
-      // TweenMax.to("#content-container", 1, {"transform":"translateX(0)", opacity:1});
-    };
+    console.log('first content-container');
+    TweenMax.to("#content-container1", 1, { "transform": "translateX(0)", opacity: 1 });
+    // TweenMax.to("#content-container", 1, {"transform":"translateX(0)", opacity:1});
+
+    for (var i = 0; i < galleryDots.length; i++) {
+      galleryDots[i].classList.remove("active");
+    }
+    galleryDots[0].classList.add("active");
   },
-  offset: 100
+  offset: "50%"
 });
+
 console.log("wAYPOINT");
 var waypoint2 = new Waypoint({
   element: document.querySelector('#content-container2'),
   handler: function handler(direction) {
     console.log(direction);
-    if (direction == 'down') {
-      console.log('second content-container');
-      TweenMax.to("#content-container2", 1, { "transform": "translateX(0)", opacity: 1 });
-      // TweenMax.to("#content-container2", 1, {"transform":"translateX(0)", opacity:1});
-    };
+    console.log('second content-container');
+    TweenMax.to("#content-container2", 1, { "transform": "translateX(0)", opacity: 1 });
+    // TweenMax.to("#content-container2", 1, {"transform":"translateX(0)", opacity:1});
+    for (var i = 0; i < galleryDots.length; i++) {
+      galleryDots[i].classList.remove("active");
+    }
+    galleryDots[1].classList.add("active");
   },
-  offset: 100
+  offset: "50%"
 });
+
 var waypoint3 = new Waypoint({
   element: document.querySelector('#content-container3'),
   handler: function handler(direction) {
     console.log(direction);
-    if (direction == 'down') {
-      console.log('third content-container');
-      TweenMax.to("#content-container3", 1, { "transform": "translateX(0)", opacity: 1 });
-      // TweenMax.to("#content-container3", 1, {"transform":"translateX(0)", opacity:1});
-    };
+    console.log('third content-container');
+    TweenMax.to("#content-container3", 1, { "transform": "translateX(0)", opacity: 1 });
+    // TweenMax.to("#content-container3", 1, {"transform":"translateX(0)", opacity:1});
+    for (var i = 0; i < galleryDots.length; i++) {
+      galleryDots[i].classList.remove("active");
+    }
+    galleryDots[2].classList.add("active");
   },
-  offset: 100
+  offset: "50%"
 });
 var waypoint4 = new Waypoint({
   element: document.querySelector('#content-container4'),
   handler: function handler(direction) {
     console.log(direction);
-    if (direction == 'down') {
-      console.log('fourth content-container');
-      TweenMax.to("#content-container4", 1, { "transform": "translateX(0)", opacity: 1 });
-      // TweenMax.to("#content-container4", 1, {"transform":"translateX(0)", opacity:1});
-    };
+    console.log('fourth content-container');
+    TweenMax.to("#content-container4", 1, { "transform": "translateX(0)", opacity: 1 });
+    // TweenMax.to("#content-container4", 1, {"transform":"translateX(0)", opacity:1});
+    for (var i = 0; i < galleryDots.length; i++) {
+      galleryDots[i].classList.remove("active");
+    }
+    galleryDots[3].classList.add("active");
   },
-  offset: 100
+  offset: "50%"
 });
 var waypoint5 = new Waypoint({
   element: document.querySelector('#content-container5'),
   handler: function handler(direction) {
     console.log(direction);
-    if (direction == 'down') {
-      console.log('fifth content-container');
-      TweenMax.to("#content-container5", 1, { "transform": "translateX(0)", opacity: 1 });
-      // TweenMax.to("#content-container5", 1, {"transform":"translateX(0)", opacity:1});
-    };
+    console.log('fifth content-container');
+    TweenMax.to("#content-container5", 1, { "transform": "translateX(0)", opacity: 1 });
+    // TweenMax.to("#content-container5", 1, {"transform":"translateX(0)", opacity:1});
+    for (var i = 0; i < galleryDots.length; i++) {
+      galleryDots[i].classList.remove("active");
+    }
+    galleryDots[4].classList.add("active");
   },
-  offset: 100
+  offset: "50%"
 });
 var waypoint6 = new Waypoint({
   element: document.querySelector('#content-container6'),
   handler: function handler(direction) {
     console.log(direction);
-    if (direction == 'down') {
-      console.log('sixth content-container');
-      TweenMax.to("#content-container6", 1, { "transform": "translateX(0)", opacity: 1 });
-      // TweenMax.to("#content-container5", 1, {"transform":"translateX(0)", opacity:1});
-    };
+    console.log('sixth content-container');
+    TweenMax.to("#content-container6", 1, { "transform": "translateX(0)", opacity: 1 });
+    // TweenMax.to("#content-container5", 1, {"transform":"translateX(0)", opacity:1});
+    for (var i = 0; i < galleryDots.length; i++) {
+      galleryDots[i].classList.remove("active");
+    }
+    galleryDots[5].classList.add("active");
   },
-  offset: 100
+  offset: "50%"
 });
 //# sourceMappingURL=gallery.js.map

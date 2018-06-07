@@ -18,12 +18,12 @@ TABLE OF CONTENTS:
 @import 'products';
 @import 'gallery';
 @font-face {
-  font-family: "Trade Gothic";
-  		src: url("/fonts/TradeGothicLTStd.otf") format("otf"),
+  font-family: "TradeGothic";
+  		src: url("../fonts/TradeGothicLTStd-Cn18.otf") format("otf"),
 }
 @font-face {
   font-family: "Gotham";
-  		src: url("/fonts/Gotham-Ultra.otf") format("otf"),
+  		src: url("../fonts/Gotham-Ultra.otf") format("otf"),
 }
 $breakpoint-mobile: 768px;
 
