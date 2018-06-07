@@ -180,7 +180,7 @@ header{
 }
 
 .wrapper{
-	margin: 3% 4%;
+	padding: 3% 4%;
 	display: flex;
 	flex-direction: column;
 	@media (max-width: $breakpoint-mobile) {
@@ -396,6 +396,10 @@ header{
 	}
 	.collection-1, .collection-4{
 		margin-bottom: 20px;
+		@media (max-width: $breakpoint-mobile) {
+			margin-bottom: 0px;
+		}
+
 	}
 	.collection-1{
 		background-image: url(../img/truckxuniqlo.jpg);
@@ -429,6 +433,7 @@ footer{
 	display: flex;
 	flex-direction: column;
 	color: #fff;
+
 	a{
 		color:#fff;
 		text-decoration: none;
@@ -550,6 +555,7 @@ footer{
 		}
 		
 	}
+
 }
 
 @media (min-width: $breakpoint-mobile) {

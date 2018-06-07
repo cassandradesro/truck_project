@@ -165,17 +165,12 @@ table {
 	background-image: url(../img/gallery-hero.jpg);
 }
 
-.gallery-section {
-	background-color: red;
-	color: #fff;
-}
-
 .gallery-wrapper {
-	background-color: green;
+	background-color: #242424;
 }
 
-.scroll {
-	background-color: yellow;
+.gallery-section h2 {
+	color: #fff;
 }
 
 .gallery-title {
@@ -183,6 +178,24 @@ table {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	color: #fff;
+	padding: 40px 0;
+}
+
+.gallery-title h1 {
+	font-size: 2rem;
+	padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+	.gallery-title h1 {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+}
+
+.gallery-title p {
+	font-weight: 200;
 }
 
 .content-container {
@@ -191,31 +204,148 @@ table {
 	align-items: center;
 }
 
+@media (max-width: 768px) {
+	.content-container {
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
+}
+
 .flex-end {
 	justify-content: flex-end;
+}
+
+.flex-end .content-text {
+	margin-right: -50px;
+	position: relative;
+	z-index: 999999;
+}
+
+@media (max-width: 768px) {
+	.flex-end .content-text {
+		margin: -20px 0 0 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.flex-end {
+		justify-content: center;
+	}
+	.flex-end.content-container {
+		flex-direction: column-reverse;
+	}
 }
 
 .flex-start {
 	justify-content: flex-start;
 }
 
+.flex-start .content-text {
+	margin-left: -50px;
+}
+
+@media (max-width: 768px) {
+	.flex-start .content-text {
+		margin: -20px 0 0 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.flex-start {
+		justify-content: center;
+	}
+}
+
 .content-image {
-	width: 390px;
+	min-width: 28.5505124451%;
 	height: 562px;
-	background-color: blue;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@media (max-width: 768px) {
+	.content-image {
+		width: 80%;
+		height: 462px;
+	}
+}
+
+.content-image1 {
+	background-image: url(../img/furniture_index_top.jpg);
+	background-position: -10px;
+}
+
+.content-image2 {
+	background-image: url(../img/stools.jpg);
+}
+
+.content-image3 {
+	background-image: url(../img/newark.jpg);
+}
+
+.content-image4 {
+	background-image: url(../img/goods_bas0031_7.jpg);
+}
+
+.content-image5 {
+	background-image: url(../img/goods_sof0044_1.jpg);
+}
+
+.content-image6 {
+	background-image: url(../img/goods_cha0028_1.jpg);
 }
 
 .content-text {
-	width: 572px;
+	width: 41.8740849195%;
 	height: 342px;
-	background-color: orange;
+	background-color: #fff;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	line-height: 20px;
+}
+
+.content-text p {
+	font-weight: 200;
+}
+
+@media (max-width: 768px) {
+	.content-text {
+		justify-content: space-between;
+		width: 100%;
+		height: 242px;
+		line-height: unset;
+	}
+	.content-text p {
+		font-size: .7rem;
+	}
+}
+
+.content-text a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: #000;
+	color: #fff;
+	font-size: .7rem;
+	padding: 6px 0 0 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.content-text a {
+		padding: 10px 0 0 0;
+	}
 }
 
 .gallery-slider-dots {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	margin-right: 20px;
+	margin-bottom: 10px;
 }
 
 .gallery-slider-dots span {
@@ -229,6 +359,29 @@ table {
 
 .gallery-slider-dots span.active {
 	background-color: #000;
+}
+
+.gallery-slider-dots span:hover {
+	background-color: #000;
+}
+
+.scroll {
+	width: 100%;
+	text-align: center;
+	padding: 60px 0;
+	color: #fff;
+	background-color: #242424;
+	border-top: 1px solid #ccc;
+}
+
+.scroll p {
+	padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+	.scroll {
+		padding: 20px;
+	}
 }
 
 @font-face {
@@ -405,7 +558,7 @@ header .bottom-menu ul li:nth-child(1) {
 }
 
 .wrapper {
-	margin: 3% 4%;
+	padding: 3% 4%;
 	display: flex;
 	flex-direction: column;
 }
@@ -661,6 +814,12 @@ header .bottom-menu ul li:nth-child(1) {
 
 .latest-collection .collection-1, .latest-collection .collection-4 {
 	margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+	.latest-collection .collection-1, .latest-collection .collection-4 {
+		margin-bottom: 0px;
+	}
 }
 
 .latest-collection .collection-1 {
