@@ -6,6 +6,38 @@ var galleryDots = document.querySelectorAll('.gallery-dot');
 //     var gallerydot = galleryDots[i];
 // }
 
+let contentContainers = document.querySelectorAll('.content-container')
+
+contentContainers.forEach(function(contentContainer, index) {
+
+  var waypoint = new Waypoint({
+    element: contentContainer,
+    handler: function(direction) {
+      if (direction === "down") {
+        TweenMax.to(contentContainer, 1, {x: 0, opacity:1});
+        if (contentContainer.classList.contains('flex-start')) {
+          TweenMax.from(contentContainer.querySelector('.content-text'), 1, {x: "-=40%"});
+        } else {
+          TweenMax.from(contentContainer.querySelector('.content-text'), 1, {x: "+=40%"});
+        }
+        TweenMax.from(contentContainer.querySelectorAll('a'), 1, {delay: 0.5, opacity: 0, y: "+=30px"}, 0.2);
+
+        this.destroy()
+      }
+      for (var i = 0; i < galleryDots.length; i++) {
+        galleryDots[i].classList.remove("active");
+      }
+      galleryDots[index].classList.add("active");
+      
+    },
+    offset: "50%"
+  });
+})
+
+/*
+
+
+
 
 var waypoint = new Waypoint({
   element: document.querySelector('#content-container1'),
@@ -23,7 +55,6 @@ var waypoint = new Waypoint({
   },
   offset: "50%"
 });
-
 
 
 
@@ -103,7 +134,7 @@ var waypoint6 = new Waypoint({
   offset: "50%"
 });
 
-
+*/
 
 
 

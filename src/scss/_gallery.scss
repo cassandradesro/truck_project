@@ -47,7 +47,7 @@ $breakpoint-mobile: 768px;
 .flex-end{
 	justify-content: flex-end;
 	&.content-container{
-		transform: translateX(-60%);
+		transform: translateX(-10%);
 
 	}
 	.content-text{
@@ -69,7 +69,7 @@ $breakpoint-mobile: 768px;
 .flex-start{
 	justify-content: flex-start;
 	&.content-container{
-		transform: translateX(60%);
+		transform: translateX(10%);
 	}
 	.content-text{
 		margin-left: -50px;

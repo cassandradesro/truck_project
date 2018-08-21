@@ -25,7 +25,7 @@ TABLE OF CONTENTS:
   font-family: "Gotham";
   		src: url("../fonts/Gotham-Ultra.otf") format("otf"),
 }
-$breakpoint-mobile: 768px;
+$breakpoint-mobile: 1210px;
 
 /* 1. Main Layout ================================= */
 
@@ -44,7 +44,7 @@ body {
 }
 .logo h1{
 	font-family: "Gotham", sans-serif;
-	font-weight: bold;
+	font-weight: 900;
 	font-size: 2rem;
 	cursor: pointer;
 	a{
@@ -55,8 +55,20 @@ body {
 		font-size: 1.2rem;
 	}
 }
-header{
 
+
+header{
+	nav{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 999;
+		&.active{
+			display: block;
+		}
+	}
 	.top-menu{
 		padding: 5%;
 		width: 100%;
@@ -66,31 +78,77 @@ header{
 		justify-content: space-between;
 	
 		.hamburger-section{
-			// background-color: red;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-
+			//use this for all hamburger navs//
+			//Watch This: https://www.youtube.com/watch?v=U17mz-RFfAY//
 			.hamburger{
-				width: 32px;
-				height: 32px;
-			
+				position: absolute;
+				z-index: 9999999;
+				left: 5%;
+				top: 7.5%;
+				width: 60px;
+				height: 60px;
+				cursor: pointer;
 				span{
 					display: block;
-					width: 90%;
-					height: 2px;
+					position: absolute;
+					height: 3px;
+					width: 30px;
 					margin-bottom: 3px;
 					background-color: #000;
+					border-radius: 8px;
+					// box-shadow: $box-shadow;
+					top: 10px;
+					left: 15px;
+					transition: .5s;
+				}
+				span:before, span:after{
+					content: '';
+					display: block;
+					position: absolute;
+					height: 3px;
+					width: 30px;
+					margin-bottom: 3px;
+					background-color: #000;
+					border-radius: 8px;
+					// box-shadow: $box-shadow;
+					top: 10px;
+					left: 0;
+					transition: .5s;
+					margin-left: 10px;
 
 				}
-				#middle-span{
-					margin-left: 10%;
+
+				span:before{
+					top: -10px;
+				}
+				span:after{
+					top: 10px;
+				}
+				&.active span{
+					background-color: rgba(0,0,0,0);
+					box-shadow: 0 2px 5px rgba(0,0,0,0);
+				}
+				&.active span:before{
+					top: 0;
+					transform: rotate(45deg);
+				}
+				&.active span:after{
+					top: 0;
+					transform: rotate(135deg);
 				}
 			}
+
+			
 				
 			p{
-				padding-left: 10px;
 				text-transform: uppercase;
+				position: absolute;
+				left: 10%;
+				top: 8%;
+				&.active{
+					visibility: hidden;
+				}
+
 			}
 		}
 		.cart{
@@ -118,6 +176,7 @@ header{
 				text-decoration: none;
 				color: #000;
 			}
+
 			li{
 				display: flex;
 				align-items: center;
@@ -158,8 +217,9 @@ header{
 	}
 	p{
 		font-size: .9rem;
-		font-weight: 200;
+		font-weight: 100;
 		line-height: 20px;
+		padding-bottom: 20px;
 	}
 
 	a{
@@ -172,6 +232,11 @@ header{
 		padding: 10px 0 0 0;
 		text-align: center;
 		text-decoration: none;
+		transition: .3s;
+		&:hover{
+			background-color: #000;
+			color: #fff;
+		}
 	}
 	@media (max-width: $breakpoint-mobile) {
 		text-align: center;
@@ -281,8 +346,12 @@ header{
 		}
 		p{
 			font-size: 1rem;
-			font-weight: 200;
+			font-weight: 100;
 			line-height: 30px;
+			line-height: 18px;
+			letter-spacing: 2.5px;
+			padding-bottom: 20px;
+
 		}
 		a{
 			display: block;
@@ -294,6 +363,11 @@ header{
 			padding: 10px 0 0 0;
 			text-align: center;
 			text-decoration: none;
+			transition: .3s;
+			&:hover{
+				background-color: #000;
+				color: #fff;
+			}
 		}
 		@media (max-width: $breakpoint-mobile) {
 			width:350px;
@@ -368,21 +442,24 @@ header{
 
 		h3{
 			font-size: 1.5em;
-			font-weight: 500;
+			font-weight: 200;
 			padding-bottom: 10px;
 		}
 		p{
-			padding: 0 60px 10px 60px;
+			padding-bottom: 10px;
+			line-height: 18px;
+			letter-spacing: 2.5px;
 
 
 
 		}
 		p,a{
-			font-size: .7rem;
-			font-weight: 200;
+			font-size: .9rem;
+			font-weight: 100;
 			color: #fff;
 
 		}
+		
 
 		@media (max-width: $breakpoint-mobile) {
 			width:350px;
@@ -496,8 +573,8 @@ footer{
 		width:200px;
 	}
 	input[placeholder]{
-		color: #fff;
 		font-family: 'din-condensed', sans-serif;
+		padding-left: 10px;
 	}
 
 	.email-container{ 
