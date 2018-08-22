@@ -2,14 +2,6 @@
 
 console.log("Truck Furniture developed by Cassandra Desrosiers designed by Ezell Brown 2");
 
-document.querySelector(".hamburger").addEventListener("click", function () {
-	console.log("hamburger clicked");
-	document.querySelector("nav").classList.toggle("active");
-
-	document.querySelector(".hamburger").classList.toggle("active");
-	document.querySelector(".hamburger-section p").classList.toggle("active");
-});
-
 var SlideshowModule = function SlideshowModule(parentSelector) {
 
 	var parent = document.querySelector(parentSelector);

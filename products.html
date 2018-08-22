@@ -8,19 +8,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://use.typekit.net/xdx5kdp.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="dist/css/main.css">		
 	</head>
 	<body>	
-		<header>
+<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="gallery.html">Gallery</a>
+					</li>
+					<li>
+						<a href="products.html">Featured Items</a>
+					</li>
+					<li>
+						<a href="javascript:;">About</a>
+					</li>
+					<li>
+						<a href="javascript:;">Contact</a>
+					</li>
+				</ul>
+			</nav>
 			<div class="top-menu">
 				<div class="hamburger-section">
-					<div class="hamburger">
-						<span></span>
-						<span id="middle-span"></span>
-						<span></span>
+					<div class="hamburger ">
+						<span class="top"></span>
+						<span class="middle"></span>
+						<span class="bottom"></span>
+
 					</div>
 					<p>Menu</p>
 				</div>
+				
 				<div class="logo">
 					<h1><a href="index.html">Truck</a></h1>
 				</div>
@@ -31,16 +54,16 @@
 			</div>
 			<div class="bottom-menu no-mobile">
 				<ul>
-					<li><a href="#">Furniture</a></li>
-					<li><a href="#">Zakka</a></li>
-					<li><a href="#">Shirokumasha</a></li>
-					<li><a href="#">Catalog / Books</a></li>
+					<li><a href="products.html">Furniture</a></li>
+					<li><a href="products.html">Zakka</a></li>
+					<li><a href="products.html">Shirokumasha</a></li>
+					<li><a href="products.html">Catalog / Books</a></li>
 				</ul>
 			</div>
 		</header>
 		<section class="hero product-hero">
 			<h2>Truck Furniture 20th Anniversary</h2>
-			<p>It has been 20 years since we first opeened truck in January 1997</p>
+			<p>It has been 20 years since we first opened truck in January 1997</p>
 			<a href="gallery.html" class="button">Read More</a>
 		</section>
 
@@ -185,5 +208,7 @@
 				</section>
 			</div>
 		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+		<script src="dist/js/hamburger.js"></script>
 	</body>
 </html>

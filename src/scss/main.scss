@@ -14,6 +14,7 @@ TABLE OF CONTENTS:
 */
 
 /* 0. Reset ================================= */
+$box-shadow: 0 2px 5px rgba(0,0,0,.2);
 @import 'reset';
 @import 'products';
 @import 'gallery';
@@ -39,8 +40,8 @@ body {
 	text-transform: uppercase;
 	font-family: "din-condensed",sans-serif;
 	letter-spacing: 3px;
-
-
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 }
 .logo h1{
 	font-family: "Gotham", sans-serif;
@@ -64,7 +65,52 @@ header{
 		top: 0;
 		left: 0;
 		width: 100%;
-		z-index: 999;
+		height: 100%;
+		background-color: rgba(0,0,0,0.9);
+		z-index: 9;
+		transition: .5s;
+		// padding: 100%;
+		ul{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50%);
+			text-align: center;
+			z-index: 10;
+
+			li{
+				margin-bottom: 40px;
+				a{
+					text-decoration: none;
+					font-size: 2rem;
+					color: #fff;
+					white-space: nowrap;
+					transition: all 300ms ease-in-out;
+					position: relative;
+
+					&:before, &:after{
+						content: "";
+						position: absolute;
+						transition: all 300ms ease-in-out;
+						pointer-events: none;
+					}
+					&:after{
+						width: 100%;
+						height: 2px;
+						background-color: #fff;
+						left: 0;
+						bottom: -5px;
+						transform: scale(0);
+					}
+					&:hover:after{
+						transform: scale(1.1);
+						@media (max-width: $breakpoint-mobile) {
+							transform: scale(0);
+						}
+					}
+				}
+			}
+		}
 		&.active{
 			display: block;
 		}
@@ -76,65 +122,53 @@ header{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 	
 		.hamburger-section{
+			position: relative;
+			z-index: 10;
+			display: flex;
+			flex-direction: row;
 			//use this for all hamburger navs//
 			//Watch This: https://www.youtube.com/watch?v=U17mz-RFfAY//
 			.hamburger{
-				position: absolute;
-				z-index: 9999999;
-				left: 5%;
-				top: 7.5%;
 				width: 60px;
-				height: 60px;
 				cursor: pointer;
+
 				span{
 					display: block;
-					position: absolute;
+					
 					height: 3px;
 					width: 30px;
-					margin-bottom: 3px;
 					background-color: #000;
 					border-radius: 8px;
-					// box-shadow: $box-shadow;
-					top: 10px;
-					left: 15px;
+					box-shadow: $box-shadow;
+					
 					transition: .5s;
 				}
-				span:before, span:after{
-					content: '';
-					display: block;
-					position: absolute;
-					height: 3px;
-					width: 30px;
-					margin-bottom: 3px;
-					background-color: #000;
-					border-radius: 8px;
-					// box-shadow: $box-shadow;
-					top: 10px;
-					left: 0;
-					transition: .5s;
+				
+
+				.middle{
+					margin: 5px 0;
 					margin-left: 10px;
+				}
+				&.active {
+					span{
+						background-color: #fff;
+					}
+					.middle{
+						background-color: rgba(0,0,0,0);
+						box-shadow: 0 2px 5px rgba(0,0,0,0);
+					}
+					.top{
+						transform: rotate(45deg);
 
-				}
+					}
+					.bottom{
+						transform: rotate(135deg);
+						margin-top: -16px;
 
-				span:before{
-					top: -10px;
-				}
-				span:after{
-					top: 10px;
-				}
-				&.active span{
-					background-color: rgba(0,0,0,0);
-					box-shadow: 0 2px 5px rgba(0,0,0,0);
-				}
-				&.active span:before{
-					top: 0;
-					transform: rotate(45deg);
-				}
-				&.active span:after{
-					top: 0;
-					transform: rotate(135deg);
+					}
 				}
 			}
 
@@ -142,13 +176,13 @@ header{
 				
 			p{
 				text-transform: uppercase;
-				position: absolute;
-				left: 10%;
-				top: 8%;
+				transition: .3s;
 				&.active{
-					visibility: hidden;
+					opacity: 0;
 				}
-
+			@media (max-width: $breakpoint-mobile) {
+				display: none;
+			}
 			}
 		}
 		.cart{
@@ -158,6 +192,7 @@ header{
 			img{
 				width: 17px;
 				height: 17px;
+				margin-right: 5px;
 			}
 		}
 	}
@@ -172,21 +207,39 @@ header{
 			flex-direction: row;
 			justify-content: center;
 			padding: 20px;
-			a{
-				text-decoration: none;
-				color: #000;
-			}
+			
 
 			li{
 				display: flex;
 				align-items: center;
 				height: 20px;
 				border-left: 1px solid #000;
-				padding: 10px;
-
-
+				padding: 13px;
 				&:nth-child(1){
 					border-left: none;
+				}
+				a{
+					text-decoration: none;
+					color: #000;
+					transition: all 300ms ease-in-out;
+					position: relative;
+					&:before, &:after{
+						content: "";
+						position: absolute;
+						transition: all 300ms ease-in-out;
+						pointer-events: none;
+					}
+					&:after{
+						width: 100%;
+						height: 1px;
+						background-color: #000;
+						left: 0;
+						bottom: -5px;
+						transform: scale(0);
+					}
+					&:hover:after{
+						transform: scale(1.1);
+					}
 				}
 			}
 		}
@@ -233,6 +286,8 @@ header{
 		text-align: center;
 		text-decoration: none;
 		transition: .3s;
+		box-shadow: $box-shadow;
+
 		&:hover{
 			background-color: #000;
 			color: #fff;
@@ -256,6 +311,9 @@ header{
 .recent-section{
 	h2{
 		margin-bottom: 20px;
+		@media (max-width: $breakpoint-mobile) {
+			margin: 20px 0;
+		}
 	}
 	.recent-container{
 		display: flex;
@@ -269,8 +327,11 @@ header{
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+
 		span{
 			text-decoration: underline;
+			font-size: 1rem;
+			color: #000;
 		}
 		a{
 			text-decoration: none;
@@ -297,6 +358,11 @@ header{
 			height:370px;
 			background-repeat: no-repeat;
 			background-size: cover;
+			transition: .3s;
+
+			&:hover{
+				box-shadow: inset 200px 200px 300px 200px rgba(0,0,0,0.71);
+			}
 
 		}
 		.recent-image1{
@@ -328,6 +394,7 @@ header{
 		}
 	}
 	.featureditem{
+		box-shadow: $box-shadow;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -340,6 +407,7 @@ header{
 		box-shadow: inset 0px -275px 148px -42px rgba(0,0,0,0.83);
 		color: #fff;
 		padding: 70px;
+		
 		h3{
 			font-size: 1.5rem;
 			padding-bottom: 10px;
@@ -364,6 +432,8 @@ header{
 			text-align: center;
 			text-decoration: none;
 			transition: .3s;
+			box-shadow: $box-shadow;
+
 			&:hover{
 				background-color: #000;
 				color: #fff;
@@ -395,6 +465,7 @@ header{
 .latest-collection{
 	border-top: 1px solid #000;
 	margin: 20px 0;
+
 	h2{
 		margin: 20px 0;
 	}
@@ -439,6 +510,10 @@ header{
 		background-size: cover;
 		box-shadow: inset 0px -200px 0px 200px rgba(0,0,0,0.48);
 		padding: 40px;
+		transition: .3s;
+		&:hover{
+			box-shadow: inset 200px 200px 300px 200px rgba(0,0,0,0.71);
+		}
 
 		h3{
 			font-size: 1.5em;

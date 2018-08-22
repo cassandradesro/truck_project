@@ -28,12 +28,20 @@ $breakpoint-mobile: 768px;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
+		cursor: pointer;
+		&:hover{
+			box-shadow: inset 200px 200px 300px 200px rgba(255,255,255,0.57);
+		}
 
 
 	}
 	.product{
 		margin: 10px 0;
 		text-align: center;
+		&:hover{
+			h3{
+			}
+		}
 	}
 }
 
