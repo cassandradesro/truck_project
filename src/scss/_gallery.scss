@@ -196,14 +196,15 @@ $breakpoint-mobile: 768px;
 	color: #fff;
 	background-color: #242424;
 	border-top: 1px solid #ccc;
-	position: relative;
-	z-index: 9;
+	position: sticky;
+	top: 80%;
+	z-index: 999;
 	p{
 		padding: 5px 0;
 	}
 	@media (max-width: $breakpoint-mobile) {
-	
-		padding: 20px;
+		display: none;
+
 	}
 
 }

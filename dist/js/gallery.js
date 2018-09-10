@@ -23,8 +23,8 @@ contentContainers.forEach(function (contentContainer, index) {
           TweenMax.from(contentContainer.querySelector('.content-text'), 1, { x: "+=40%" });
         }
         TweenMax.from(contentContainer.querySelectorAll('a'), 1, { delay: 0.5, opacity: 0, y: "+=30px" }, 0.2);
-
-        this.destroy();
+        // TweenMax.to(document.querySelector('.gallery-slider-dots'), 1, {y: "-=80%"}); //move slider dots up on the page
+        // this.destroy()
       }
       for (var i = 0; i < galleryDots.length; i++) {
         galleryDots[i].classList.remove("active");

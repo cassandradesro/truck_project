@@ -408,8 +408,9 @@ table {
 	color: #fff;
 	background-color: #242424;
 	border-top: 1px solid #ccc;
-	position: relative;
-	z-index: 9;
+	position: sticky;
+	top: 82%;
+	z-index: 999;
 }
 
 .scroll p {
@@ -418,7 +419,7 @@ table {
 
 @media (max-width: 768px) {
 	.scroll {
-		padding: 20px;
+		display: none;
 	}
 }
 
@@ -476,9 +477,9 @@ header nav {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
 	background-color: rgba(0, 0, 0, 0.9);
-	z-index: 9;
+	z-index: 100001;
 	transition: .5s;
 }
 
@@ -546,7 +547,7 @@ header .top-menu {
 
 header .top-menu .hamburger-section {
 	position: relative;
-	z-index: 10;
+	z-index: 100001;
 	display: flex;
 	flex-direction: row;
 }

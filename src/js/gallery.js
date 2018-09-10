@@ -16,14 +16,15 @@ contentContainers.forEach(function(contentContainer, index) {
     handler: function(direction) {
       if (direction === "down") {
         TweenMax.to(contentContainer, 1, {x: 0, opacity:1});
-        if (contentContainer.classList.contains('flex-start')) {
-          TweenMax.from(contentContainer.querySelector('.content-text'), 1, {x: "-=40%"});
-        } else {
-          TweenMax.from(contentContainer.querySelector('.content-text'), 1, {x: "+=40%"});
-        }
+          if (contentContainer.classList.contains('flex-start')) {
+            TweenMax.from(contentContainer.querySelector('.content-text'), 1, {x: "-=40%"});
+          } else {
+            TweenMax.from(contentContainer.querySelector('.content-text'), 1, {x: "+=40%"});
+          }
         TweenMax.from(contentContainer.querySelectorAll('a'), 1, {delay: 0.5, opacity: 0, y: "+=30px"}, 0.2);
+        // TweenMax.to(document.querySelector('.gallery-slider-dots'), 1, {y: "-=80%"}); //move slider dots up on the page
+        // this.destroy()
 
-        this.destroy()
       }
       for (var i = 0; i < galleryDots.length; i++) {
         galleryDots[i].classList.remove("active");
@@ -34,6 +35,8 @@ contentContainers.forEach(function(contentContainer, index) {
     offset: "50%"
   });
 })
+
+
 
 /*
 
